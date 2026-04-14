@@ -14,6 +14,11 @@
 
 
 obs 
+<img width="540" height="16" alt="image" src="https://github.com/user-attachments/assets/32362746-be2c-402b-acf8-680d5bc3ba97" />
+<img width="1071" height="758" alt="image" src="https://github.com/user-attachments/assets/8c30a8b5-716b-432a-a339-8b72a05b0a2f" />
+<img width="716" height="618" alt="image" src="https://github.com/user-attachments/assets/fcf35587-40c6-4532-91c5-4ec931feadc8" />
+<img width="977" height="760" alt="image" src="https://github.com/user-attachments/assets/d548cf5d-b100-4621-9397-76f9526bbc6e" />
+<img width="1838" height="833" alt="image" src="https://github.com/user-attachments/assets/b5a3ff0d-1504-4d56-9716-138df27512d8" />
 
 
 
