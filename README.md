@@ -88,27 +88,34 @@ Finalmente inicié la transmisión desde OBS y comprobé en VLC que el streaming
 
 <img src="https://github.com/user-attachments/assets/b5a3ff0d-1504-4d56-9716-138df27512d8" />
 
+---
+
 ### Errores y soluciones
 
 Durante la práctica me encontré con varios problemas:
 
-**Error al conectar OBS con el servidor**  
-✔️ Solución: revisar la IP y el puerto en la configuración RTMP  
+### 🔹 Error al conectar OBS con el servidor
+✔️ **Solución:** revisar la IP y el puerto en la configuración RTMP.
 
-**El streaming no se veía en VLC**  
-✔️ Solución: comprobar la URL completa del stream  
+### 🔹 El streaming no se veía en VLC
+✔️ **Solución:** comprobar la URL completa del stream (`rtmp://localhost/live/haven.local`) y asegurarse de que el servidor está activo.
 
-**Problemas con el firewall**  
-✔️ Solución: abrir el puerto correspondiente en el sistema  
+### 🔹 Problemas con el firewall
+✔️ **Solución:** abrir el puerto correspondiente (1935) en el sistema.
 
-**Error en la configuración de Nginx**  
-✔️ Solución: revisar la sintaxis del archivo de configuración  
+### 🔹 Error en la configuración de NGINX
+✔️ **Solución:** revisar la sintaxis del archivo de configuración (`nginx.conf`) usando `nginx -t`.
+
+### 🔹 OBS no se abría (error Wayland)
+✔️ **Solución:** ejecutar OBS forzando X11:
+```bash
+QT_QPA_PLATFORM=xcb obs```
 
 ---
 
 ### Conclusiones
 
-En esta práctica he aprendido a configurar un servidor de streaming utilizando RTMP y Nginx.
+En esta práctica he aprendido a configurar un servidor de streaming utilizando RTMP y NGINX.
 
 También he entendido cómo funciona la transmisión de vídeo en tiempo real y cómo se puede enviar contenido desde OBS a un servidor propio.
 
