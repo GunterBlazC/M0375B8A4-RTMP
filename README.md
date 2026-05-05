@@ -26,65 +26,65 @@ En resumen, RTMP es ideal para enviar contenido en directo, mientras que otros p
 
 ---
 
-## Parte practica  
+## Parte practica
 
-Primero preparé la máquina virtual con Ubuntu e instalé Nginx junto con el módulo RTMP para poder crear un servidor de streaming. Durante esta parte instalé los paquetes necesarios usando apt.
+Primero preparé la máquina virtual con Ubuntu e instalé Nginx junto con el módulo RTMP. Esto era necesario para poder convertir la máquina en un servidor de streaming.
 
 <img src="https://github.com/user-attachments/assets/06a915da-6413-44d0-9c2a-925f49e3835c" />
 
-Después comprobé que la instalación se había realizado correctamente revisando la salida de la terminal y verificando que no había errores.
+Después continué con la instalación de los paquetes necesarios. En esta parte comprobé que el sistema descargaba e instalaba correctamente los componentes sin errores.
 
 <img src="https://github.com/user-attachments/assets/d8d32eb2-d6c2-487a-947b-37c624e61916" />
 
-Una vez instalado, accedí al archivo de configuración de Nginx para poder modificarlo y añadir la configuración del módulo RTMP.
+Una vez instalado Nginx, abrí el archivo de configuración para añadir el bloque de RTMP. Este archivo es importante porque ahí se define cómo va a funcionar el servidor de streaming.
 
 <img src="https://github.com/user-attachments/assets/bb81faa7-7923-457e-9bcd-8c0dd76b1329" />
 
-En este archivo añadí el bloque RTMP donde se define el puerto y la aplicación de streaming.
+Dentro del archivo añadí la configuración RTMP, indicando la aplicación `live`, activando la emisión con `live on` y desactivando la grabación con `record off`.
 
 <img src="https://github.com/user-attachments/assets/bb0bac05-cf95-4d97-8809-cc36cbb941d6" />
 
-Después guardé los cambios y comprobé que la configuración era correcta.
+Después reinicié el servicio de Nginx para aplicar los cambios realizados en la configuración.
 
 <img src="https://github.com/user-attachments/assets/64a517fc-5476-4255-a00f-6ed1fe5d0dd6" />
 
-A continuación reinicié el servicio de Nginx para aplicar la nueva configuración.
+A continuación instalé FFmpeg, ya que lo iba a utilizar para enviar un vídeo de prueba al servidor RTMP desde la terminal.
 
 <img src="https://github.com/user-attachments/assets/7efd9ce2-f166-46d0-96fc-06adb1205af3" />
 
-Después comprobé que el servicio estaba activo y funcionando correctamente.
+Luego lancé una prueba con FFmpeg usando un vídeo local. Con este comando envié el vídeo al servidor RTMP usando la ruta `rtmp://localhost/live/haven.local`.
 
 <img src="https://github.com/user-attachments/assets/7fe3cf3f-5033-4f2d-9f2b-bd7ebc1c5837" />
 
-Una vez hecho esto, verifiqué que el servidor estaba preparado para recibir conexiones RTMP.
+Después instalé VLC para poder comprobar si la emisión RTMP se podía reproducir correctamente desde un cliente multimedia.
 
 <img src="https://github.com/user-attachments/assets/056b345f-b798-44a2-8787-bf8d256927cd" />
 
-Finalmente revisé la configuración completa para asegurarme de que todo estaba correctamente definido.
+En VLC abrí un flujo de red e introduje la URL `rtmp://localhost/live/haven.local`. Con esto comprobé que el contenido enviado por FFmpeg podía recibirse y visualizarse desde el reproductor.
 
 <img src="https://github.com/user-attachments/assets/7c452ce3-2b6e-4aee-80cd-c6872d79ac0e" />
 
 ---
 
-Después pasé a configurar OBS para enviar el streaming al servidor.
+Después pasé a configurar OBS para hacer una emisión de pantalla hacia el servidor RTMP.
 
-Primero abrí OBS y accedí a la configuración.
+Primero instalé OBS Studio desde la terminal para poder usarlo como programa de emisión.
 
 <img src="https://github.com/user-attachments/assets/32362746-be2c-402b-acf8-680d5bc3ba97" />
 
-Luego configuré el servidor RTMP introduciendo la dirección IP del servidor y la clave de transmisión.
+Luego abrí OBS y añadí una fuente de captura de pantalla. Esta fuente permite que OBS capture lo que ocurre en el escritorio y lo pueda enviar al servidor.
 
 <img src="https://github.com/user-attachments/assets/8c30a8b5-716b-432a-a339-8b72a05b0a2f" />
 
-Después ajusté los parámetros básicos de emisión.
+Después configuré las propiedades de la captura de pantalla, seleccionando la pantalla correcta para que OBS pudiera mostrarla dentro de la escena.
 
 <img src="https://github.com/user-attachments/assets/fcf35587-40c6-4532-91c5-4ec931feadc8" />
 
-A continuación inicié la transmisión desde OBS.
+A continuación abrí los ajustes de OBS para configurar la emisión RTMP. En esta parte indiqué el servidor y la clave de transmisión para que OBS enviara el vídeo al servidor Nginx.
 
 <img src="https://github.com/user-attachments/assets/d548cf5d-b100-4621-9397-76f9526bbc6e" />
 
-Finalmente comprobé que el streaming llegaba correctamente al servidor y se podía visualizar sin problemas.
+Finalmente inicié la transmisión desde OBS y comprobé en VLC que el streaming llegaba correctamente. En la captura se ve OBS enviando la imagen y VLC reproduciendo el mismo contenido desde la URL RTMP.
 
 <img src="https://github.com/user-attachments/assets/b5a3ff0d-1504-4d56-9716-138df27512d8" />
 
