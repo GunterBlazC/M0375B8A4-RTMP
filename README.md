@@ -1,5 +1,99 @@
 # M0375B8A4-RTMP
 
+## Parte teorica
+
+### ¿Qué es RTMP?
+
+El protocolo RTMP (Real-Time Messaging Protocol) es un protocolo de transmisión de vídeo y audio en tiempo real a través de Internet. Se utiliza principalmente para hacer streaming en directo desde una fuente, como por ejemplo OBS, hacia un servidor.
+
+RTMP funciona enviando el contenido multimedia desde el cliente al servidor de forma continua, permitiendo que otros usuarios puedan acceder a ese contenido en tiempo real.
+
+Este protocolo es muy utilizado en plataformas de streaming y en servidores propios configurados con herramientas como Nginx, ya que permite una transmisión estable y de baja latencia.
+
+---
+
+### Comparativa RTMP vs otros protocolos
+
+RTMP es uno de los protocolos más utilizados para enviar vídeo en directo, pero no es el único. Existen otros como HLS o RTSP que se usan en diferentes situaciones.
+
+RTMP destaca por su baja latencia y su facilidad de uso con herramientas como OBS. Sin embargo, no es el mejor para reproducir directamente en navegadores modernos.
+
+Por otro lado, HLS es más compatible con navegadores y dispositivos, pero tiene más latencia, por lo que no es tan adecuado para streaming en tiempo real.
+
+RTSP se utiliza más en cámaras de vigilancia y sistemas de videovigilancia, siendo más común en entornos de red interna.
+
+En resumen, RTMP es ideal para enviar contenido en directo, mientras que otros protocolos como HLS se usan más para distribuirlo.
+
+---
+
+## Parte practica
+
+Primero preparé la máquina virtual con Ubuntu e instalé Nginx junto con el módulo RTMP para poder crear un servidor de streaming.
+
+<img src="AQUI_TU_CAPTURA" />
+
+Después configuré el archivo de configuración de Nginx para habilitar el módulo RTMP y definir el puerto y la aplicación de streaming.
+
+<img src="AQUI_TU_CAPTURA" />
+
+Luego inicié el servicio y comprobé que el servidor estaba funcionando correctamente.
+
+<img src="AQUI_TU_CAPTURA" />
+
+A continuación configuré OBS para enviar el streaming al servidor RTMP usando la dirección y la clave correspondiente.
+
+<img src="AQUI_TU_CAPTURA" />
+
+Después probé a emitir contenido y verifiqué que el streaming llegaba correctamente al servidor.
+
+<img src="AQUI_TU_CAPTURA" />
+
+Finalmente comprobé que el streaming se podía reproducir correctamente desde otro cliente, confirmando que todo el sistema funcionaba correctamente.
+
+<img src="AQUI_TU_CAPTURA" />
+
+---
+
+### Errores y soluciones
+
+Durante la práctica me encontré con varios problemas:
+
+**Error al conectar OBS con el servidor**  
+✔️ Solución: revisar la IP y el puerto en la configuración RTMP  
+
+**El streaming no se veía en VLC**  
+✔️ Solución: comprobar la URL completa del stream  
+
+**Problemas con el firewall**  
+✔️ Solución: abrir el puerto correspondiente en el sistema  
+
+**Error en la configuración de Nginx**  
+✔️ Solución: revisar la sintaxis del archivo de configuración  
+
+---
+
+### Conclusiones
+
+En esta práctica he aprendido a configurar un servidor de streaming utilizando RTMP y Nginx.
+
+También he entendido cómo funciona la transmisión de vídeo en tiempo real y cómo se puede enviar contenido desde OBS a un servidor propio.
+
+Uno de los puntos más importantes ha sido comprender la importancia de la configuración de red y de los puertos para que el streaming funcione correctamente.
+
+En general, la práctica me ha servido para entender mejor cómo funcionan los sistemas de streaming en directo.
+
+---
+
+### Webgrafía
+
+- https://nginx.org/en/docs/
+- https://obsproject.com/
+- https://ffmpeg.org/
+- https://punkymo.gitbook.io/miwiki
+
+
+# M0375B8A4-RTMP
+
 <img width="620" height="26" alt="image" src="https://github.com/user-attachments/assets/06a915da-6413-44d0-9c2a-925f49e3835c" />
 <img width="728" height="413" alt="image" src="https://github.com/user-attachments/assets/d8d32eb2-d6c2-487a-947b-37c624e61916" />
 <img width="726" height="643" alt="image" src="https://github.com/user-attachments/assets/bb81faa7-7923-457e-9bcd-8c0dd76b1329" />
