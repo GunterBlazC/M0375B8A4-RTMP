@@ -27,32 +27,67 @@ En resumen, RTMP es ideal para enviar contenido en directo, mientras que otros p
 ---
 
 ## Parte practica
+## Parte practica  
 
-Primero preparé la máquina virtual con Ubuntu e instalé Nginx junto con el módulo RTMP para poder crear un servidor de streaming.
+Primero preparé la máquina virtual con Ubuntu e instalé Nginx junto con el módulo RTMP para poder crear un servidor de streaming. Durante esta parte fui instalando los paquetes necesarios y dejando el entorno preparado para trabajar.
 
-<img src="AQUI_TU_CAPTURA" />
+<img src="https://github.com/user-attachments/assets/06a915da-6413-44d0-9c2a-925f49e3835c" />
 
-Después configuré el archivo de configuración de Nginx para habilitar el módulo RTMP y definir el puerto y la aplicación de streaming.
+Después continué con la instalación y configuración del servidor, comprobando que todos los componentes necesarios estaban correctamente instalados en el sistema.
 
-<img src="AQUI_TU_CAPTURA" />
+<img src="https://github.com/user-attachments/assets/d8d32eb2-d6c2-487a-947b-37c624e61916" />
 
-Luego inicié el servicio y comprobé que el servidor estaba funcionando correctamente.
+Una vez instalado, accedí al archivo de configuración de Nginx para poder añadir la parte correspondiente al módulo RTMP y definir el comportamiento del servidor de streaming.
 
-<img src="AQUI_TU_CAPTURA" />
+<img src="https://github.com/user-attachments/assets/bb81faa7-7923-457e-9bcd-8c0dd76b1329" />
 
-A continuación configuré OBS para enviar el streaming al servidor RTMP usando la dirección y la clave correspondiente.
+Después verifiqué diferentes configuraciones del sistema y comandos relacionados para asegurarme de que todo estaba correctamente preparado antes de iniciar el servicio.
 
-<img src="AQUI_TU_CAPTURA" />
+<img src="https://github.com/user-attachments/assets/bb0bac05-cf95-4d97-8809-cc36cbb941d6" />
 
-Después probé a emitir contenido y verifiqué que el streaming llegaba correctamente al servidor.
+A continuación comprobé que los módulos y servicios estaban correctamente disponibles en el sistema.
 
-<img src="AQUI_TU_CAPTURA" />
+<img src="https://github.com/user-attachments/assets/64a517fc-5476-4255-a00f-6ed1fe5d0dd6" />
 
-Finalmente comprobé que el streaming se podía reproducir correctamente desde otro cliente, confirmando que todo el sistema funcionaba correctamente.
+Luego ejecuté comandos adicionales para dejar el servidor listo y poder iniciar correctamente el servicio de streaming.
 
-<img src="AQUI_TU_CAPTURA" />
+<img src="https://github.com/user-attachments/assets/7efd9ce2-f166-46d0-96fc-06adb1205af3" />
+
+Después verifiqué que el servicio estaba activo y funcionando correctamente en el sistema.
+
+<img src="https://github.com/user-attachments/assets/7fe3cf3f-5033-4f2d-9f2b-bd7ebc1c5837" />
+
+Una vez todo configurado, comprobé que el servidor estaba accesible y preparado para recibir streaming.
+
+<img src="https://github.com/user-attachments/assets/056b345f-b798-44a2-8787-bf8d256927cd" />
+
+Finalmente revisé la configuración completa del servidor para asegurarme de que todo estaba correctamente definido y listo para usar.
+
+<img src="https://github.com/user-attachments/assets/7c452ce3-2b6e-4aee-80cd-c6872d79ac0e" />
 
 ---
+
+Después pasé a configurar OBS para poder enviar el streaming al servidor RTMP.
+
+Primero comprobé la configuración básica dentro de OBS.
+
+<img src="https://github.com/user-attachments/assets/32362746-be2c-402b-acf8-680d5bc3ba97" />
+
+Luego configuré el servidor RTMP dentro de OBS, indicando la dirección IP y la ruta del streaming.
+
+<img src="https://github.com/user-attachments/assets/8c30a8b5-716b-432a-a339-8b72a05b0a2f" />
+
+Después ajusté diferentes parámetros de emisión para asegurar una correcta transmisión del contenido.
+
+<img src="https://github.com/user-attachments/assets/fcf35587-40c6-4532-91c5-4ec931feadc8" />
+
+A continuación inicié la emisión desde OBS y comprobé que el streaming se estaba enviando correctamente al servidor.
+
+<img src="https://github.com/user-attachments/assets/d548cf5d-b100-4621-9397-76f9526bbc6e" />
+
+Finalmente verifiqué que el streaming llegaba correctamente y que se podía visualizar sin problemas, confirmando que todo el sistema funcionaba correctamente.
+
+<img src="https://github.com/user-attachments/assets/b5a3ff0d-1504-4d56-9716-138df27512d8" />
 
 ### Errores y soluciones
 
