@@ -108,8 +108,8 @@ Durante la práctica me encontré con varios problemas:
 
 ### 🔹 OBS no se abría (error Wayland)
 ✔️ **Solución:** ejecutar OBS forzando X11:
-```bash
-QT_QPA_PLATFORM=xcb obs```
+
+QT_QPA_PLATFORM=xcb obs
 
 ---
 
